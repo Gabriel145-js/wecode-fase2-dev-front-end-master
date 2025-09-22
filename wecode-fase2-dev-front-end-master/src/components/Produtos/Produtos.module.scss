@@ -1,0 +1,124 @@
+@use '../../styles/partials/variables.scss' as vars;
+
+.containerProdutos {
+    padding: 32px 16px 48px 16px;
+    color: vars.$colorTitulos;
+
+    h1 {
+        color: vars.$colorTitulos;
+        font-family: vars.$fontFamilyDefault;
+        font-weight: 400;
+        font-size: 1rem;
+        margin: 0 0 16px 0;
+    }
+
+    .slideProdutos {
+        :global(.slick-track) {
+            display: flex;
+            align-items: stretch;
+        }
+
+        :global(.slick-slide) {
+            padding-right: 16px;
+        }
+    }
+
+    .produtos {
+
+        font-family: vars.$fontFamilyDefault;
+
+        .imageContainer {
+            background-color: rgba(247, 247, 247, 1);
+            margin-bottom: 8px;
+            position: relative;
+            aspect-ratio: 1;
+            overflow: hidden;
+
+            .descontoTag {
+                position: absolute;
+                bottom: 8px;
+                left: 8px;
+                background-color: transparent;
+                color: vars.$bebeceVermelho;
+                padding: 4px 8px;
+                font-size: 0.75rem;
+                font-weight: 500;
+                z-index: 2;
+            }
+
+            .iconeUtil {
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                z-index: 2;
+                
+            }
+
+            .iconeFavorito {
+                top: 8px;
+                right: 8px;
+            }
+
+            .iconeCarrinho {
+                bottom: 8px;
+                right: 8px;
+            }
+        }
+
+        .produtoImg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .produtoNome {
+            font-size: 0.8rem;
+            font-weight: 300;
+            line-height: 1.2;
+            margin: 0 0 4px 0;
+           
+        }
+
+        .produtoPreco {
+            font-size: 0.9rem;
+            font-weight: 500;
+           
+        }
+
+        .produtoDesconto {
+            text-decoration: line-through;
+            color: vars.$colorDescricao;
+        }
+    }
+
+    .notificacao {
+        position: fixed;
+        top: 20px;
+        left: 60%;
+        width: 300px;
+        min-height: 50px;
+        padding: 10px;
+        transition: transform 0.4s ease-in-out;
+        background-color: #fafafa;
+        color: rgb(0, 0, 0);
+        border-radius: 5px;
+        z-index: 100;
+        font-family: vars.$fontFamilyDefault;
+        font-size: 0.8rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        transform: translateX(200vw);
+
+        &.notificacaoAberto {
+            transform: translateX(-50%);
+        }
+
+        p {
+            margin: 3px 0;
+            text-align: center;
+        }
+    }
+
+}

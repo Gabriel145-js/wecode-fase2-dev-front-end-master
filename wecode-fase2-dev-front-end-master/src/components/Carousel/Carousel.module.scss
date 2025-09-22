@@ -1,0 +1,54 @@
+@use '../../styles/partials/variables.scss' as vars;
+
+.containerCarrousel {
+    position: relative;
+    width: 100%;
+    height: auto;
+    
+
+    img {
+        object-fit: cover;
+        width: 100%;
+    }
+
+    :global {
+        .slick-dots {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            display: flex !important;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+
+        .slick-dots li {
+            margin: 0px -3px;
+        }
+
+        .slick-dots li button:before {
+            font-size: 8px;
+            opacity: 1;
+            color: #8a8a8a;
+            transition: color 0.3s ease;
+        }
+
+        .slick-dots li.slick-active button:before {
+            color: #ffffff;
+        }
+    }
+
+
+    .btnConhecaAgora{
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: #fff;
+        font-family: vars.$fontFamilyDefault;
+        font-weight: 400;
+        background-color: #ffffff18;
+        backdrop-filter: blur(16px);
+        padding: 12px 24px;
+        border: 1px solid #fff
+    }
+
+}

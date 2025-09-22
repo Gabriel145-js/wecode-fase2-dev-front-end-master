@@ -1,0 +1,80 @@
+@use '../../styles/partials/variables.scss' as vars;
+
+.containerConhecaMais {
+    font-family: vars.$fontFamilyDefault;
+    padding: 32px 16px;
+    background-color: #F7F7F7;
+
+    .containerTit {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+
+
+
+        h1 {
+            font-size: 1rem;
+            color: vars.$colorTitulos;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .descTit {
+            font-style: italic;
+            font-size: 0.75rem;
+            color: vars.$colorDescricao;
+            font-weight: 300;
+            margin-top: 0;
+
+        }
+    }
+
+    :global {
+        .slick-dots {
+            display: flex !important;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+
+        .slick-dots li {
+            margin: 0px -3px;
+        }
+
+        .slick-dots li button:before {
+            font-size: 8px;
+            opacity: 1;
+            color: rgba(138, 138, 138, 1);
+            transition: color 0.3s ease;
+        }
+
+        .slick-dots li.slick-active button:before {
+            color: rgba(29, 29, 29, 1);
+
+        }
+    }
+
+    .imgBanner {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .titBanner {
+        font-size: 1rem;
+        font-weight: 400;
+        color: vars.$colorTitulos;
+    }
+
+    .descBanner {
+        font-size: 0.75rem;
+        color: vars.$colorDescricao;
+        font-weight: 300;
+    }
+
+    .btnSaibaMais {
+        font-family: vars.$fontFamilyRaleway;
+        font-size: 0.75rem;
+        text-decoration: none;
+        color: vars.$colorTitulos
+    }
+}

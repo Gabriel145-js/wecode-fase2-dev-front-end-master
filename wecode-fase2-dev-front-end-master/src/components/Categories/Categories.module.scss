@@ -1,0 +1,43 @@
+@use '../../styles/partials/variables.scss' as vars;
+
+.containerCategories {
+    padding: 32px 16px 48px 16px;
+    margin-bottom: 20px;
+
+    h1 {
+        color: rgba(29, 29, 29, 1);
+        font-family: vars.$fontFamilyDefault;   
+        font-weight: 400;
+        font-size: 1rem;
+    }
+
+    :global(.slick-track) {
+        display: flex;
+        align-items: stretch;
+    }
+
+    :global(.slick-slide) {
+        padding-right: 16px; //Adiciona um espaço entre os banners
+    }
+
+    .bannersContainer {
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+    }
+
+    .imgBannerCategories {
+        width: 100%;
+        border-radius: 4px;
+        display: block;
+    }
+
+    p {
+        font-family: vars.$fontFamilyDefault;
+        font-weight: 300;
+        font-size: 0.9rem;
+        text-align: left;
+        color: rgba(29, 29, 29, 1);
+        margin: 4px 0 0 0;
+    }
+}

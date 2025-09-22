@@ -1,0 +1,53 @@
+@use '../../../styles/partials/variables.scss' as vars;
+
+.menuItem {
+    color: vars.$colorTitulos;
+    font-family: vars.$fontFamilyDefault;
+
+    .titMenu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 6px;
+        
+     
+        .nomeMenu {
+            font-weight: 400;
+            font-size: 0.88rem;
+        }
+
+        .setaMenu {
+            font-size: 1.2rem;
+            transition: transform 0.2s ease;
+            color: #999;
+
+            &.aberto {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    .subMenu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out; //faz o efeito de transição abrindo o submenu
+
+        &.aberto {
+            max-height: 500px; //faz o efeito de transição abrindo o submenu
+        }
+
+        li {
+            font-size: 0.88rem;
+            font-weight: 300;
+            padding: 12px 30px;
+        
+            &:first-child{
+                padding-top: 0;
+            }
+            
+        }
+    }
+}
